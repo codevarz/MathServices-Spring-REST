@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+  <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+    <encoder>
+      <pattern>
+        %-5level %logger{36}: [%.-1000msg]%n%rEx{full,
+          javax.servlet,
+          org.apache.maven,
+          org.springframework,
+          org.testng,
+          java.lang.reflect,
+          sun.reflect
+        }
+      </pattern>
+    </encoder>
+  </appender>
+
+  <include resource="math-logging.xml" />
+</configuration>
